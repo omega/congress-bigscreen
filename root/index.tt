@@ -1,0 +1,7 @@
+
+        <div id="speaker"></div>
+        <div id="next_speaker"></div>
+        
+        <div id="agenda"></div>
+        
+        <div id="logo"><img src="[% c.uri_for('/static/logo.png') %]" /></div>

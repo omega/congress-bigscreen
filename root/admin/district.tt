@@ -1,0 +1,12 @@
+<h1>Kretser og Lag</h1>
+<h2>Legg til gruppering</h2>
+    
+<form method="post">
+    <label>Navn: </label><input type="text" name="name" size="60" />
+    <button type="submit">Legg til</button>
+</form>
+
+<h2>Alle grupper</h2>
+<ul>
+    [% WHILE (d = districts.next) %]<li>[% d.name %]</li>[% END %]
+</ul>

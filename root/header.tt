@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="[% c.uri_for('/static/base.css') %]" type="text/css" />
+        <script src="[% c.uri_for('/static/MochiKit.js') %]"></script>
+        <script src="[% c.uri_for('/static/hotkeys.js') %]"></script>
+        
+        <script src="[% c.uri_for('/static/base.js') %]"></script>
+    </head>
+    <body id="[% bodyid %]">
+        <div id="menu">
+            <ul>
+                <li><a href="/admin">Administrasjon</a></li>
+                <li><a href="/admin/delegate">Delegater</a></li>
+                <li><a href="/admin/district">Kretser og lag</a></li>
+                <li><a href="/admin/agenda">Saksliste</a></li>
+            </ul>
+        </div>
+        

@@ -1,0 +1,36 @@
+<div id="speechlist">
+    <form action="[% c.uri_for('/admin/speechlist') %]" method="post">
+        <label>Delegat nr: </label><input tabindex="1" type="text" name="nr" /><button type="submit">Legg til</button>
+    </form>
+    <a accesskey="n" href="[% c.uri_for('/admin/speechlist', {n => 1}) %]">NESTE TALER</a>
+    <ul>
+        [% WHILE (s = speechlist.next) %]
+        <li>[% s.delegate.pnr %] - [% s.delegate.name %] 
+            <a href="[% c.uri_for('/admin/speechlist', {d => s.id}) %]">[D]</a>
+        </li>
+        [% END %]
+    </ul>
+</div>
+<div id="agenda">
+    <ul>
+        [% WHILE (d = agenda.next) %]
+            [% IF us == 1 AND NOT d.subcase %] 
+                [% us = 0 %]
+                </ul>
+                </li>
+            [% END %]
+            <li>
+                [% UNLESS d.subcase %]<b class="agenda">[% d.agendanr %][% END %]
+                [% d.subcase %] - [% d.title %]
+                [% UNLESS d.subcase %]</b>[% END %]
+                [% UNLESS d.active %]<a href="[% c.uri_for('/admin/activate', { a => d.id }) %]">[Aktiv]</a>[% END %]
+                [% IF us == 0 AND NOT d.subcase %]
+                    [% us = 1 %]
+                    <ul class="subcase">
+                [% ELSE %]
+                    </li>
+                [% END %]
+        [% END %]
+
+    </ul>
+</div>

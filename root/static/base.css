@@ -1,0 +1,132 @@
+body#frontend {
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+        font-weight: bold;
+}
+body#frontend div#menu {
+        display: none;
+}
+body#frontend div#speaker {
+        position: absolute;
+        left: 10px;
+        bottom: 70px;
+        font-size: 28pt;
+        opacity: 0; 
+}
+body#frontend div#district {
+        position: absolute;
+        left: 25px;
+        bottom: -28px;
+        font-size: 20pt;
+        opacity: inherit;
+}
+
+body#frontend div#next_speaker {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        font-size: 20pt;
+        opacity: 0;
+}
+body#frontend div#agenda {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-size: 28pt;
+        opacity: 0;
+
+}
+
+body#frontend div#logo {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+}
+
+
+body#admin div#speechlist {
+        position: absolute;
+        left: 200px;
+        top: 30px;
+        width: 290px;
+        bottom: 30px;
+}
+body#frontend div#speechlist_total {
+        position:relative;
+        overflow: auto;
+        height: 400px;
+}
+
+
+body#admin div#agenda {
+        position: absolute;
+        left: 500px;
+        top: 30px;
+        bottom: 30px;
+        right: 0px;
+        overflow: auto;
+}
+div#delegate_storage, div#agenda_storage, div#logo_storage, div#next_delegate_storage {
+        display: none;
+}
+
+
+body#admin {
+        background-color: white;
+        color: black;
+        margin-top: 20px;
+        font-weight: normal;
+}
+body#admin div#menu {
+        display: block;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: #333;
+        color: white !important;
+        font-size: 8pt;
+        z-index: 100;
+}
+body#admin div#menu a {
+        color: white;
+        text-decoration: none;
+}
+body#admin div#menu li {
+        display: inline;
+        color: white;
+        margin-right: 7px;
+}
+body#admin div#menu ul {
+        margin: 3px;
+
+}
+
+body#admin div {
+        opacity: 100;
+}
+
+body#admin div#massimport {
+        position: absolute;
+        left: 400px;
+        top: 150px;
+}
+body#admin div#delegates {
+        position: absolute;
+        left: 10px;
+        top: 150px;
+}
+input, textarea, button {
+        border: 1px solid black;
+        background-color: #efefef;
+}
+a[accesskey]:before {
+        content: attr(accesskey) " ";
+        /*    vertical-align: -15%; */
+        font-size: 40%;
+        color: #000;
+}
+a {
+        text-decoration: none;
+}

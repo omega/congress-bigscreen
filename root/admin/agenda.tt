@@ -1,0 +1,33 @@
+<h1>Saksliste</h1>
+<h2>Legg til sak</h2>
+    
+<form method="post">
+    <label>Nr: </label><input type="text" name="agendanr" size="2" />
+    <label>Undernr: </label><input type="text" name="subcase" size="2" />
+    <label>Tittel: </label><input type="text" name="title" size="60" />
+    <button type="submit">Legg til</button>
+</form>
+
+[% us = 0 %]
+<h2>Sakslisten</h2>
+<ul>
+    [% WHILE (d = agenda.next) %]
+        [% IF us == 1 AND NOT d.subcase %] 
+            [% us = 0 %]
+            </ul>
+            </li>
+        [% END %]
+        <li>
+            [% UNLESS d.subcase %]<b class="agenda">[% d.agendanr %][% END %]
+            [% d.subcase %] - [% d.title %]
+            [% UNLESS d.subcase %]</b>[% END %]
+            [% UNLESS d.active %]<a href="[% c.uri_for('/admin/activate', { a => d.id }) %]">[Aktiv]</a>[% END %]
+            [% IF us == 0 AND NOT d.subcase %]
+                [% us = 1 %]
+                <ul class="subcase">
+            [% ELSE %]
+                </li>
+            [% END %]
+    [% END %]
+            
+</ul>

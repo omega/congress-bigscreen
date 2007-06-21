@@ -1,0 +1,14 @@
+---
+name: BigScreen
+
+db:
+    dsn: 'dbi:SQLite:__HOME__/db/sqlite.db'
+    user:
+    password:
+'View::Default':
+    TEMPLATE_EXTENSION: '.tt'
+    DEBUG: 1
+    POST_PROCESS: 'footer.tt'
+    PRE_PROCESS: 'header.tt'
+session:
+    flash_to_stash: 1
