@@ -43,12 +43,9 @@ function update() {
             var elem = getElement(id);
 
             if (elem.innerHTML == content) {
-                logDebug(id + " is unchanged");
             } else {
-                logDebug(id + " is updated");
                 var addE = function(i, c) {
                     var el = getElement(i);
-                    logDebug(i);
                     el.innerHTML = c;
                     appear(i);
                 };

@@ -4,4 +4,4 @@
         
         <div id="agenda"></div>
         
-        <div id="logo"><img src="[% c.uri_for('/static/logo.png') %]" /></div>
+        <div id="logo"><img src="[% c.uri_for('/static/lm07_small.jpg') %]" /></div>
