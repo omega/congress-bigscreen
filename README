@@ -1,1 +1,8 @@
-Run script/bigscreen_server.pl to test the application.
+Setup:
+
+* Install cpanminus: https://github.com/miyagawa/cpanminus
+* Install deps (cpanm --installdeps .)
+* Run script/bigscreen_deploy.pl to deploy the database schema
+* Run plackup to start the application.
+* Visit http://localhost:5000/admin to setup delegates, districts and agenda
+* Visit http://<your-ip>:5000/ from the computer you want to show on a bigscreen
