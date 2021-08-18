@@ -10,5 +10,6 @@ db:
     DEBUG: 1
     POST_PROCESS: 'footer.tt'
     PRE_PROCESS: 'header.tt'
+    ENCODING: 'UTF-8'
 session:
     flash_to_stash: 1

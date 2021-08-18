@@ -2,6 +2,7 @@ package BigScreen::Controller::Root;
 
 use strict;
 use warnings;
+use utf8;
 use base 'Catalyst::Controller';
 
 #

@@ -4,7 +4,7 @@ function crontab() {
 
 function render_speaker(o) {
     if (o.nr) {
-        return o.nr + " " + o.name + " (" + o.district + ")";
+        return o.nr + " " + o.name + (o.district ? " (" + o.district + ")" : "");
     } else {
         return "";
     }
@@ -30,7 +30,7 @@ function unschedule() {
 }
 function update() {
     
-    var ok = function(res) {
+var ok = function(res) {
         for (id in res) {
             var content;
             var o = res[id];
@@ -59,8 +59,10 @@ function update() {
         logError(err);
         reschedule();
     };
-    var def = loadJSONDoc('/ajax/update');
-    def.addCallbacks(ok, fail);
+
+    fetch('/ajax/update')
+        .then(res => res.json())
+        .then(ok);
 }
 
 function bootloader() {

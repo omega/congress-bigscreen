@@ -85,7 +85,7 @@ sub end : Private {
     
     my $res = $c->stash->{res};
     
-    $c->res->body(objToJson($res));
+    $c->res->body(encode_json($res));
     
 }
 =head1 AUTHOR

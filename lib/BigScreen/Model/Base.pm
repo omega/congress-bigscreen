@@ -13,7 +13,7 @@ __PACKAGE__->config(
         $cfg->{'dsn'},
         $cfg->{'user'},
         $cfg->{'password'},
-        {AutoCommit => 1}
+        {AutoCommit => 1, sqlite_unicode => 1}
     ],
 
 );
